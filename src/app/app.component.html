@@ -1,0 +1,41 @@
+<h3>RSA Client</h3>
+
+<div>
+  <label for="inputText">Mensaje a enviar</label>
+  <textarea id="inputText" rows="1" cols="40" [(ngModel)]="inputText"> </textarea>
+</div>
+<div>
+  <label for="inputTextHash">Hash del mensaje</label>
+  <textarea id="inputTextHash" rows="1" cols="40" [(ngModel)]="inputTextHash"></textarea>
+</div>
+<div>
+  <label for="e_pub_key">e public key</label>
+  <textarea id="e_pub_key" rows="1" cols="40" [(ngModel)]="serverPublicKeyEhex"> </textarea>
+</div>
+<div>
+  <label for="n_pub_key">n public key</label>
+  <textarea id="n_pub_key" rows="1" cols="40" [(ngModel)]="serverPublicKeyNhex"> </textarea>
+</div>
+<div>
+  <label for="k_random_key">k/r random key</label>
+  <textarea id="k_random_key" rows="1" cols="40" [(ngModel)]="randomKeyKhex"> </textarea>
+</div>
+<div>
+  <label for="receivedMessage">received message</label>
+  <textarea id="receivedMessage" rows="1" cols="40" [(ngModel)]="receivedMessage"> </textarea>
+</div>
+<div>
+  <label for="encryptedMessage">encrypted/signed message</label>
+  <textarea id="encryptedMessage" rows="1" cols="40" [(ngModel)]="encryptedMessage"> </textarea>
+</div>
+
+<div> <button (click)="getKeysButton()">Get Public Keys from Server</button> </div>
+<div> <button (click)="sendEncryptMessageButton()">send Encrypted Message</button> </div>
+<div> <button (click)="sendBlindSignButton()">send Blinded for Signature</button></div>
+<div> <button (click)="sendNonRepudiationButton()">Send with non-repudiation</button></div>
+<div> <button (click)="sendPostMessage()">Send POST</button> </div>
+<div> <button (click)="sendGetMessage()">Send GET</button> </div>
+
+<label for="outputText">Output Text:</label>
+<textarea id="outputText" rows="1" cols="40" [(ngModel)]="outputText"></textarea>
+<div> <button (click)="doNothing()">clickme and refresh...</button> </div>
